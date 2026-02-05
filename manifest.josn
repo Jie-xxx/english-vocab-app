@@ -1,6 +1,6 @@
 {
-  "name": "英文單字背誦工具",
-  "short_name": "單字背誦",
+  "name": "practice",
+  "short_name": "單字練習",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#eef2f7",
