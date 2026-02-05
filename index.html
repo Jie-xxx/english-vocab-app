@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英文單字背誦工具</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3b82f6">
+</head>
+
+<body>
+  <div class="card">
+    <div class="tag">Vocabulary</div>
+
+    <!-- 單字編號 -->
+    <p id="word-index" class="word-index"></p>
+
+    <!-- 單字與詞性 -->
+    <h1 class="word-line">
+      <span id="word">Word</span>
+      <span id="pos" class="pos"></span>
+    </h1>
+
+    <!-- 中文意思 -->
+    <p id="meaning" class="meaning hidden"></p>
+
+    <!-- 按鈕區 -->
+    <div class="actions">
+      <button class="btn" onclick="toggleMeaning()">顯示中文</button>
+      <button class="btn" onclick="speak('word')">🔊 單字</button>
+      <button class="btn" onclick="speak('sentence')">🔊 例句</button>
+      <button class="btn outline" onclick="prevWord()">上一題</button>
+      <button class="btn outline" onclick="nextWord()">下一題</button>
+    </div>
+
+    <!-- 例句 -->
+    <div class="sentence-box">
+      <p id="sentence"></p>
+      <p id="sentencecn" class="sentencecn hidden"></p>
+    </div>
+
+    <button class="btn small" onclick="toggleSentence()">顯示例句翻譯</button>
+  </div>
+
+  <!-- JS -->
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
